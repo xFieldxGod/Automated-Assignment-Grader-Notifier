@@ -1,0 +1,49 @@
+\usepackage{fontspec}
+
+% ฟอนต์หลัก: THSarabun (ราชการไทย รองรับไทยครบ)
+\setmainfont{THSarabun}[
+  Path=/sessions/clever-focused-carson/mnt/csc490/auto_grader/fonts/,
+  Extension=.ttf,
+  BoldFont=THSarabun-Bold,
+  ItalicFont=THSarabun-Italic,
+  BoldItalicFont=THSarabun-BoldItalic
+]
+
+% ฟอนต์ monospace สำหรับโค้ด: DejaVu Sans Mono (Latin + box-drawing)
+\setmonofont{DejaVu Sans Mono}[Scale=0.85]
+
+% ฟอนต์สำรองสำหรับอักษรไทยในที่ที่ mono รองรับไม่ได้
+\newfontfamily\thaifontmono{THSarabun}[
+  Path=/sessions/clever-focused-carson/mnt/csc490/auto_grader/fonts/,
+  Extension=.ttf,
+  Scale=0.9
+]
+
+% ตัดคำไทยถูกต้อง
+\XeTeXlinebreaklocale "th_TH"
+\XeTeXlinebreakskip = 0pt plus 1pt
+
+% แม็ปอักขระที่ THSarabun ไม่มี (ลูกศร, bullet, ฯลฯ) ให้ใช้ DejaVu Sans
+\newfontfamily\fallbackfont{DejaVu Sans}
+\usepackage{newunicodechar}
+\newunicodechar{→}{{\fallbackfont →}}
+\newunicodechar{←}{{\fallbackfont ←}}
+\newunicodechar{↑}{{\fallbackfont ↑}}
+\newunicodechar{↓}{{\fallbackfont ↓}}
+\newunicodechar{►}{{\fallbackfont ►}}
+\newunicodechar{◄}{{\fallbackfont ◄}}
+\newunicodechar{▲}{{\fallbackfont ▲}}
+\newunicodechar{▼}{{\fallbackfont ▼}}
+\newunicodechar{│}{{\fallbackfont │}}
+\newunicodechar{─}{{\fallbackfont ─}}
+\newunicodechar{┌}{{\fallbackfont ┌}}
+\newunicodechar{┐}{{\fallbackfont ┐}}
+\newunicodechar{└}{{\fallbackfont └}}
+\newunicodechar{┘}{{\fallbackfont ┘}}
+\newunicodechar{•}{{\fallbackfont •}}
+\newunicodechar{✓}{{\fallbackfont ✓}}
+\newunicodechar{✗}{{\fallbackfont ✗}}
+
+% สีลิงก์
+\usepackage{xcolor}
+\definecolor{linkblue}{HTML}{2563EB}

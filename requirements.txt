@@ -1,0 +1,10 @@
+# ===== Bot 1: Data Processor =====
+openpyxl>=3.1.2          # อ่าน/เขียนไฟล์ Excel
+gspread>=6.0.0           # เชื่อม Google Sheets (ใช้เมื่อ SOURCE="gsheet")
+google-auth>=2.27.0      # Service account สำหรับ gspread
+
+# ===== Bot 2: Document Builder =====
+fpdf2>=2.7.9             # สร้างไฟล์ PDF รองรับ Unicode/ภาษาไทย
+
+# ===== Bot 3: Communicator =====
+ezgmail>=2023.2.9        # ส่งอีเมลผ่าน Gmail API (ต้องทำ OAuth token ก่อน)

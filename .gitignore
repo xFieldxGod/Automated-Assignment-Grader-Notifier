@@ -1,0 +1,23 @@
+# Secrets / auth (ห้ามเผยแพร่)
+credentials.json
+token.json
+*.pickle
+
+# Python
+__pycache__/
+**/__pycache__/
+*.pyc
+*.pyo
+
+# ผลลัพธ์ที่สร้างขึ้นระหว่างรัน
+output/*.pdf
+output/*.log
+
+# โฟลเดอร์ซ้ำซ้อน (nested copy)
+auto_grader/
+
+# ไฟล์ขยะจากเครื่องมือต่าง ๆ
+.~lock.*#
+missfont.log
+*.aux
+*.log
